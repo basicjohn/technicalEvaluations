@@ -1,0 +1,241 @@
+====================================
+====================================
+====================================
+====================================
+
+
+			Question #1: Turning Strings to URLs
+			URLs cannot have spaces. Instead, all spaces in a string are replaced with %20. Write an algorithm that replaces all spaces in a string with %20.
+
+			You may not use the replace() method or regular expressions to solve this problem. Solve the problem with and without recursion.
+
+			Example
+			Input: "Jasmine Ann Jones"
+
+			Output: "Jasmine%20Ann%20Jones"
+
+
+Notes:
+
+Using Recursion:
+
+I can go in two different routes to accompolish recursion. one being a nested function and the other is a series of if statements.  Both of which would call back on themselves.
+
+// Function to take in a string (str) 
+// declare i = 0
+// declare output = ""
+// create second function to take an argument of the declared index value of (0) and output variable
+	// if statement that checks if (str[i]!=== " " && i <= str.length)
+		// add str[i] to end of output.
+		// increment i
+		// return second function
+	// if statement that checks if (str[i] === " " i <= str.length)
+		add "%20" to end of output
+		return second function
+// outside the if statements return output;
+
+
+Not Using Recursion:
+// Function to take in a string (str) and an index position (i)
+
+split(" ")
+join("%20")
+return 
+
+
+====================================
+====================================
+====================================
+====================================
+
+
+Question #2: Array Deduping
+Write an algorithm that removes duplicates from an array. Do not use a function like filter() to solve this. Once you have solved the problem, demonstrate how it can be solved with filter(). Solve the problem with and without recursion.
+
+Example
+Input: [7, 9, "hi", 12, "hi" 7, 53]
+
+Output: [7, 9, "hi", 12, 53]
+
+Notes:
+
+Using Recursion:
+// Function to take in an array (arr) and an index position (i)
+// Use an if statement to check if i is undefined if it is then define i to equal 0
+// if statement to check 
+
+Not Using Recursion:
+
+
+====================================
+====================================
+====================================
+====================================
+
+
+			Question #3: Compressing Strings
+			Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
+
+			Example
+			Input: "aaabccdddda"
+
+			Output: "3ab2c4da"
+
+Notes:
+
+Can I assume that its considering lowercase characters and uppercase characters as different things?
+
+
+
+Using Recursion:
+
+
+things I need to track.  
+	input string
+	index = str.length
+	currentLetter = ""
+	repeat = 0
+	output
+	
+function compress(str, i, letter, repeat, output) {
+	if (letter === str[i]) {
+		repeat++;
+		return function();
+	}
+	else if (i !=== 0) {
+		if (repeat > 1){
+			output = repeat.concat(output);
+			}
+		letter = str[i]
+		output = letter.concat(output);
+		repeat = 1;
+		return function(str, i, letter, repeat, output);
+	}
+return output;
+}
+
+
+// change the name of repeat to occurance so it is more readable
+
+
+
+// Function to take in a string (str)  
+// declare i = 0
+// declare current
+// declare output = ""
+// create second function to take an argument of the declared index value of (0) and output variable
+// if statement that 
+Not Using Recursion:
+
+function
+for loop to pull out each one using slice and then search the new array for an occurance
+
+
+====================================
+====================================
+====================================
+====================================
+
+
+			Question #4: Checking for Uniqueness
+			Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
+
+			Example
+			Input: "hello"
+
+			Output: false
+
+			Input: "copyright"
+
+			Output: true
+
+Q's
+---
+Do uppercase versus lower case characters count as unique?
+
+function uniqueness(str, i, ) {
+	// function that takes 
+
+}
+
+
+
+	
+function uniqueness(str, i, letter) {
+	function dupeFinder () {
+		if (letter !=== str[i]) {
+			
+		}
+		else if (letter === str[i]) {
+			return false;
+		}
+
+	}
+
+
+
+====================================
+====================================
+====================================
+====================================
+
+Question #5: Array Sorting
+Write an algorithm that sorts an array without using the sort() method. There are many different sorting algorithms - take the time to read about the following:
+
+Quick sort
+Merge sort
+Heap sort
+Insertion sort
+Bubble sort
+Selection sort
+You may implement any of the above algorithms (or your own) to solve the problem - as long as it doesn't use sort().
+
+Example
+Input: [9, 2, 7, 12]
+
+Output: [2, 7, 9, 12]
+
+
+
+Notes:
+
+The algorithm that popped into my head but that makes sense because it's the simplest brute force method but also pretty slow.
+
+Merge sort seems like a variation of bubble sort but I'm having a hard time understanding why it works when looking at an example.  
+
+QuickSort seems to be a better version of quick sort.  I might attemp it in the whiteboard if I feel comfortable enough with bubble sort.
+
+Using Bubble Sort:
+
+	Create a function that takes an arr,i, finalCheck
+		delcare i = 0
+			if statement (arr[i] > arr[i++]) {
+			//removing the position
+				holder = arr.splice(i,1)
+			// reinserting the position
+				arr.splice(i++,0,holder)
+			// incrementing through
+				i++
+				finalCheck = 0;
+			//if at the end of the array then start over
+				if (i === array.length) {
+					i = 0
+					return function
+				}
+				return function
+			} 
+			//increment if current position is correct
+			else if (arr[i] < arr[i++]) {
+				i++;
+				finalCheck++;
+				// if the array is being
+					if (finalCheck === arr.length) {
+						return output;
+					}
+				return function;
+			}
+
+		}
+	
+
+}
